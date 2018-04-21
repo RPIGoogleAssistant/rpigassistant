@@ -73,6 +73,6 @@ pip install google-auth==1.3.0	google-auth-httplib2==0.0.3 google-auth-oauthlib=
 cp -f  $gassist_user_home/$credname .
 google-oauthlib-tool --client-secrets $gassist_user_home/$credname --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless
 googlesamples-assistant-devicetool register-model --manufacturer "Pi Foundation" \
-          --product-name $prodname --type LIGHT --model $modelid
+          --product-name $prodname --type LIGHT --trait action.devices.traits.OnOff --model $modelid
 echo "Testing the installed google assistant. Make a note of the generated Device-Id"
 googlesamples-assistant-hotword --project_id $projid --device_model_id $modelid
